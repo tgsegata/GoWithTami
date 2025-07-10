@@ -1,15 +1,130 @@
 main {
-    width: 100vw;
-    height: 100vh;
-    background-color: #ecf1f979;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 120px;
+  background: #f8f9fa;
+  position: relative;
+  z-index: 0;
 }
-figure {
-    width: 100%;
-    height: 100%;
 
-    display: flex;
-    background-position: center;
-    background-size: cover;
-    background-repeat: repeat;
-    background-image: url(../assets/images/manutencao.png);
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url('../assets/images/manutencao.png') center/cover no-repeat;
+  color: #fff;
+  position: relative;
+  padding: 0 20px;
+
+  .content {
+    h2 {
+      font-size: 64px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 40px;
+    font-size: 24px;
+    animation: bounce 2s infinite;
+  }
+}
+
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 100px 10%;
+  flex-wrap: wrap;
+
+  &.image-text,
+  &.split {
+    .text, .split-text {
+      flex: 1 1 45%;
+      h3 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: 18px;
+        color: #555;
+      }
+    }
+
+    .image, .split-image {
+      flex: 1 1 45%;
+      height: 400px;
+      background-image: url('../assets/images/manutencao.png');
+      background-size: cover;
+      background-position: center;
+      border-radius: 20px;
+    }
+  }
+
+  &.split {
+    flex-direction: row-reverse;
+  }
+}
+
+.full-image {
+  position: relative;
+  min-height: 100vh;
+  background-image: url('../assets/images/manutencao.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 10%;
+
+  .overlay-text {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .content h2 {
+    font-size: 42px;
+  }
+
+  .section {
+    flex-direction: column;
+    gap: 30px;
+    padding: 60px 20px;
+
+    .text, .split-text, .image, .split-image {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+  .full-image {
+    padding-left: 5%;
+    .overlay-text {
+      font-size: 28px;
+      text-align: center;
+    }
+  }
 }
