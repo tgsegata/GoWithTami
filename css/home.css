@@ -1,129 +1,171 @@
 main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding-bottom: 120px;
-  background: #f8f9fa;
-  position: relative;
-  z-index: 0;
+  padding-bottom: 100px;
+  background: #fdfdfd;
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: url('../assets/images/manutencao.png') center/cover no-repeat;
-  color: #fff;
-  position: relative;
-  padding: 0 20px;
-
-  .content {
-    h2 {
-      font-size: 64px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 20px;
-    }
-  }
-
-  .scroll-cue {
-    position: absolute;
-    bottom: 40px;
-    font-size: 24px;
-    animation: bounce 2s infinite;
-  }
-}
-
-.section {
+.hero-split {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  padding: 100px 10%;
+  padding: 80px 10%;
   flex-wrap: wrap;
 
-  &.image-text,
-  &.split {
-    .text, .split-text {
-      flex: 1 1 45%;
-      h3 {
-        font-size: 36px;
+  .hero-text {
+    flex: 1 1 45%;
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #444;
+    }
+    .cta {
+      padding: 14px 28px;
+      background: #151515;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+
+  .hero-image {
+    flex: 1 1 45%;
+    height: 500px;
+    background: url('../assets/images/manutencao.png') center/cover no-repeat;
+    border-radius: 20px;
+  }
+}
+
+.features-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  padding: 60px 10%;
+  background: #fafafa;
+
+  .feature {
+    flex: 1 1 30%;
+    text-align: center;
+
+    h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+    }
+  }
+}
+
+.steps-section {
+  padding: 100px 10%;
+  background: #fff;
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .steps-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .step {
+      flex: 1 1 30%;
+      h4 {
+        font-size: 20px;
         margin-bottom: 10px;
       }
       p {
-        font-size: 18px;
-        color: #555;
+        color: #666;
       }
     }
+  }
+}
 
-    .image, .split-image {
-      flex: 1 1 45%;
-      height: 400px;
-      background-image: url('../assets/images/manutencao.png');
-      background-size: cover;
-      background-position: center;
-      border-radius: 20px;
+.destinations {
+  padding: 80px 10%;
+  background: #f7f7f7;
+
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  .dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+
+    .dest {
+      height: 240px;
+      background: url('../assets/images/manutencao.png') center/cover no-repeat;
+      border-radius: 16px;
     }
   }
-
-  &.split {
-    flex-direction: row-reverse;
-  }
 }
 
-.full-image {
-  position: relative;
-  min-height: 100vh;
-  background-image: url('../assets/images/manutencao.png');
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 10%;
+.call-to-action {
+  padding: 100px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #e0f7fa, #ffe3ec);
 
-  .overlay-text {
+  h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .cta {
+    padding: 14px 28px;
+    background: #151515;
     color: white;
-    font-size: 36px;
-    font-weight: 700;
-  }
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
   }
 }
 
 @media (max-width: 768px) {
-  .hero .content h2 {
-    font-size: 42px;
-  }
-
-  .section {
+  .hero-split {
     flex-direction: column;
-    gap: 30px;
-    padding: 60px 20px;
-
-    .text, .split-text, .image, .split-image {
+    .hero-text, .hero-image {
       flex: 1 1 100%;
       text-align: center;
     }
+    .hero-image {
+      height: 300px;
+      margin-top: 30px;
+    }
   }
 
-  .full-image {
-    padding-left: 5%;
-    .overlay-text {
-      font-size: 28px;
+  .features-row {
+    flex-direction: column;
+    align-items: center;
+
+    .feature {
+      margin-bottom: 30px;
+    }
+  }
+
+  .steps-section .steps-grid {
+    flex-direction: column;
+    align-items: center;
+    .step {
+      flex: 1 1 100%;
       text-align: center;
     }
   }
