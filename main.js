@@ -1,6 +1,8 @@
+// THREE IMPORT JS LIBRARY -----
 import * as THREE from 'three';
 
 
+// THREE JS SCENE SETUP -----
 const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
@@ -27,5 +29,6 @@ function animate() {
     cube.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
-animate();
 
+// START ANIMATION -----
+animate();

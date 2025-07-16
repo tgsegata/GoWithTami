@@ -24,31 +24,28 @@
   <!-- MAIN SECTION -->
   <main>
 
+    <!-- js library #1 -->
     <button class="cta">Start Planning</button>
     <button class="cta">Let’s Go</button>
 
+    <!-- js library anime.js > path -->
     <svg viewBox="0 0 200 200" width="200" height="200">
       <path class="circuit" d="M50,150 Q100,50 150,150" stroke="lightgray" fill="none" stroke-width="2" />
       <circle class="logo" r="5" fill="red" />
     </svg>
-
     <div class="circle"></div>
 
 
-
+    <!-- js library mouse -->
     <div id="docs-demos">
-  <div class="docs-demo is-active">
-    <div class="square"></div>
-  </div>
-</div>
+      <div class="docs-demo is-active">
+        <div class="square"></div>
+      </div>
+    </div>
 
 
 
-
-
-
-
-    <!-- NEW SCROLLABLE HOMEPAGE -->
+    <!-- SCROLLABLE HOMEPAGE -->
     <!-- <h1>Lightbox2 Examples</h1>
 
 
@@ -138,9 +135,8 @@
      <button class="cta">Let’s Go</button>
    </section> -->
 
-
-
   </main>
+
 
   <!-- FOOTER -->
   <footer id="siteFooter"></footer>
@@ -148,10 +144,8 @@
 
 
   <!-- CONNECTION JS -->
+
   <script src="js/fixedLayout.js"></script>
-  <!-- <script src="js/lightbox-plus-jquery.js"></script> -->
-
-
   <script src="js/anime.js"></script>
 
   <!-- Load Motion One -->
@@ -170,7 +164,6 @@
 
   <!-- Load Anime.js for SVG path animation -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
   <script>
     // Animate logo along path using Anime.js
     document.addEventListener('DOMContentLoaded', () => {
@@ -187,7 +180,8 @@
       });
     });
   </script>
-  <!-- 
+
+  <!-- library not working -->
   <script type="module">
     import { animate, stagger } from 'https://cdn.jsdelivr.net/npm/motion/+esm';
     import { createDraggable, createSpring } from 'https://cdn.jsdelivr.net/npm/@motionone/interaction/+esm';
@@ -208,38 +202,40 @@
         damping: 6
       })
     });
-  </script> -->
+  </script>
 
- <script type="module">
-  import { createAnimatable, utils } from "https://esm.sh/animejs@4.0.0-beta.27";
+  <!-- mouse follow library -->
+  <script type="module">
+    import { createAnimatable, utils } from "https://esm.sh/animejs@4.0.0-beta.27";
 
-  const $demos = document.querySelector('#docs-demos');
-  const $demo = $demos.querySelector('.docs-demo.is-active');
+    const $demos = document.querySelector('#docs-demos');
+    const $demo = $demos.querySelector('.docs-demo.is-active');
 
-  let bounds = $demo.getBoundingClientRect();
-  const refreshBounds = () => bounds = $demo.getBoundingClientRect();
+    let bounds = $demo.getBoundingClientRect();
+    const refreshBounds = () => bounds = $demo.getBoundingClientRect();
 
-  const animatableSquare = createAnimatable('.square', {
-    x: 500,
-    y: 500,
-    ease: 'out(3)',
-  });
+    const animatableSquare = createAnimatable('.square', {
+      x: 500,
+      y: 500,
+      ease: 'out(3)',
+    });
 
-  const onMouseMove = (e) => {
-    const { width, height, left, top } = bounds;
-    const hw = width / 2;
-    const hh = height / 2;
-    const x = utils.clamp(e.clientX - left - hw, -hw, hw);
-    const y = utils.clamp(e.clientY - top - hh, -hh, hh);
-    animatableSquare.x(x);
-    animatableSquare.y(y);
-  };
+    const onMouseMove = (e) => {
+      const { width, height, left, top } = bounds;
+      const hw = width / 2;
+      const hh = height / 2;
+      const x = utils.clamp(e.clientX - left - hw, -hw, hw);
+      const y = utils.clamp(e.clientY - top - hh, -hh, hh);
+      animatableSquare.x(x);
+      animatableSquare.y(y);
+    };
 
-  window.addEventListener('mousemove', onMouseMove);
-  $demos.addEventListener('scroll', refreshBounds);
-</script>
+    window.addEventListener('mousemove', onMouseMove);
+    $demos.addEventListener('scroll', refreshBounds);
+  </script>
 
-<script type="module" src="/main.js"></script>
+  <!-- Load Three.js -->
+  <script type="module" src="/main.js"></script>
 
 </body>
 
