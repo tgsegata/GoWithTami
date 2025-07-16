@@ -18,6 +18,7 @@
     "sass": "^1.89.2"
   },
   "dependencies": {
+    "animejs": "^4.0.2",
     "lightbox2": "^2.11.5"
   }
 }
