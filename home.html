@@ -37,10 +37,10 @@
 
 
     <div id="docs-demos">
-      <div class="docs-demo is-active">
-        <div class="square"></div>
-      </div>
-    </div>
+  <div class="docs-demo is-active">
+    <div class="square"></div>
+  </div>
+</div>
 
 
 
@@ -210,30 +210,36 @@
     });
   </script> -->
 
-  <script type="module">
-    import { createAnimatable, utils } from 'https://esm.sh/motion@10.16.2/experimental';
+ <script type="module">
+  import { createAnimatable, utils } from "https://esm.sh/animejs@4.0.0-beta.27";
 
-    const $demo = document.querySelector('.docs-demo.is-active');
-    let bounds = $demo.getBoundingClientRect();
+  const $demos = document.querySelector('#docs-demos');
+  const $demo = $demos.querySelector('.docs-demo.is-active');
 
-    const anim = createAnimatable('.square', {
-      x: { duration: 300 },
-      y: { duration: 300 },
-      ease: 'out(3)'
-    });
+  let bounds = $demo.getBoundingClientRect();
+  const refreshBounds = () => bounds = $demo.getBoundingClientRect();
 
-    window.addEventListener('mousemove', (e) => {
-      const x = utils.clamp(e.clientX - bounds.left - bounds.width / 2, -100, 100);
-      const y = utils.clamp(e.clientY - bounds.top - bounds.height / 2, -100, 100);
-      anim.x(x);
-      anim.y(y);
-    });
-  </script>
+  const animatableSquare = createAnimatable('.square', {
+    x: 500,
+    y: 500,
+    ease: 'out(3)',
+  });
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  const onMouseMove = (e) => {
+    const { width, height, left, top } = bounds;
+    const hw = width / 2;
+    const hh = height / 2;
+    const x = utils.clamp(e.clientX - left - hw, -hw, hw);
+    const y = utils.clamp(e.clientY - top - hh, -hh, hh);
+    animatableSquare.x(x);
+    animatableSquare.y(y);
+  };
 
+  window.addEventListener('mousemove', onMouseMove);
+  $demos.addEventListener('scroll', refreshBounds);
+</script>
 
-
+<script type="module" src="/main.js"></script>
 
 </body>
 
