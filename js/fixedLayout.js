@@ -153,16 +153,16 @@ let footer = `
 
         <article id="footer_6">
             <a href="https://www.linkedin.com/in/tamires-segata-355b021bb" target="_blank">
-                <img src="/assets/images/linkedin-svgrepo-com.svg" alt="linkedin logo">
+                <img src="/images/linkedin-svgrepo-com.svg" alt="linkedin logo">
             </a>
             <a href="https://www.behance.net/tamiressegata" target="_blank">
-                <img src="/assets/images/behance-svgrepo-com.svg" alt="behance logo">
+                <img src="/images/behance-svgrepo-com.svg" alt="behance logo">
             </a>
             <a href="https://www.instagram.com/mihsegata/" target="_blank">
-                <img src="/assets/images/instagram-svgrepo-com.svg" alt="instagram logo">
+                <img src="/images/instagram-svgrepo-com.svg" alt="instagram logo">
             </a>
             <a href="mailto:tgsegata@gmail.com" target="_blank">
-                <img src="/assets/images/telegram-svgrepo-com.svg" alt="email logo">
+                <img src="/images/telegram-svgrepo-com.svg" alt="email logo">
             </a>
         </article>
     </div>
@@ -183,24 +183,6 @@ let moreInfoIcon = document.querySelectorAll(".moreFooter");
 console.log(moreInfoIcon)
 // let burgerFooter = document.getElementById("navFooter");
 let closeInfoIcon = document.querySelectorAll(".closeFooter");
-
-
-// to open the menu mobile
-// moreInfoIcon.addEventListener("click", function(){
-//     burgerFooter.style.display = "flex";
-//     moreInfoIcon.style.display = "none";
-//     closeInfoIcon.style.display = "flex";
-// })
-
-
-
-
-
-
-// I NEED TO CLOSE THE OTHER NAVS WHEN I OPEN ONE
-// function closeAllMenus () {
-//     moreInfoIcon.forEach()
-// }
 
 
 moreInfoIcon.forEach(
@@ -230,9 +212,3 @@ closeInfoIcon.forEach(
         })
     }
 );
-
-// closeInfoIcon.addEventListener("click", function(){
-//     burgerFooter.style.display = "none";
-//     moreInfoIcon.style.display = "flex";
-//     closeInfoIcon.style.display = "none";
-// })

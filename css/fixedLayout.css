@@ -86,19 +86,19 @@ header figure {
 }
 #burguer {
     display: none;
-    background-image: url(../assets/images/burger.svg.png);
+    background-image: url(/images/burger.svg.png);
 }
 
 #logo_img {
-    background-image: url(../assets/images/logo.png);
+    background-image: url(/images/logo.png);
 }
 #brand_img {
-    background-image: url(../assets/images/brand.png);
+    background-image: url(/images/brand.png);
     width: 6vw;
     height: 4vw;
 }
 #contact_img {
-    background-image: url(../assets/images/contact.jpg.png);
+    background-image: url(/images/contact.jpg.png);
 }
 
 /* HEADER MOBILE SECTION */
@@ -149,7 +149,7 @@ header figure {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/closebutton2.webp);
+    background-image: url(/images/closebutton2.webp);
     display: none;
 }
 
@@ -194,7 +194,7 @@ footer a, p, h3 {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    background-image: url(../assets/images/setaaa.png);
+    background-image: url(/images/setaaa.png);
 }
 #footer_1 {
     grid-area: contentF1;

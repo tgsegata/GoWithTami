@@ -39,7 +39,7 @@ main {
   .hero-image {
     flex: 1 1 45%;
     height: 500px;
-    background: url('../assets/images/manutencao.png') center/cover no-repeat;
+    background: url('/images/manutencao.png') center/cover no-repeat;
     border-radius: 20px;
   }
 }
@@ -112,7 +112,7 @@ main {
 
     .dest {
       height: 240px;
-      background: url('../assets/images/manutencao.png') center/cover no-repeat;
+      background: url('/images/manutencao.png') center/cover no-repeat;
       border-radius: 16px;
     }
   }
