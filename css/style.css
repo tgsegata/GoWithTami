@@ -219,6 +219,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: auto;
     transition: var(--transition);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-block: 15px;
@@ -235,6 +236,16 @@ body {
     grid-template-columns: repeat(3, 1fr);
     justify-items: flex-start;
     align-items: center;
+}
+
+.header-top .container .logo-Tami {
+    width: 100%;
+    justify-items: center;
+}
+
+.logo-Tami img {
+    width: 150px;
+    height: auto;
 }
 
 .helpline-box .wrapper {
@@ -287,6 +298,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-block: 15px;
+    margin-top: 40px;
 }
 
 .social-list {
@@ -778,7 +790,9 @@ body {
 }
 
 .footer-brand img {
-    width: 180px;
+    width: 220px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .footer-brand .logo {
@@ -858,7 +872,7 @@ address {
 }
 
 .footer-bottom {
-    background: var(--gray-dark);
+    background: #171717;
     padding-block: 20px;
     text-align: center;
 }
@@ -1162,8 +1176,8 @@ address {
     }
 
     .footer .container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 50px;
+        grid-template-columns: 60% 30%;
+        gap: 80px;
     }
 
     .footer-form {
