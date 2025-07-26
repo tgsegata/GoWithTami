@@ -114,8 +114,8 @@
                     <p class="hero-text">Join Tami on unforgettable journeys to the world's most beautiful destinations,
                         handpicked for their stunning landscapes and rich cultures.</p>
                     <div class="btn-group">
-                        <button class="btn btn-primary">Learn more</button>
-                        <button class="btn btn-secondary">Plan Your Trip</button>
+                        <button class="btn btn-primary hero-title">Learn more</button>
+                        <button class="btn btn-secondary hero-title">Plan Your Trip</button>
                     </div>
                 </div>
             </section>
@@ -746,6 +746,16 @@
                 backSpeed: 30,
                 loop: true
             });
+        });
+    </script>
+
+    <!--  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script>
+        gsap.from(".hero-title", {
+            y: 100,
+            opacity: 0,
+            duration: 1
         });
     </script>
 
