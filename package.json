@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "animejs": "^4.0.2",
+    "kursor": "^0.1.6",
     "lightbox2": "^2.11.5",
     "three": "^0.178.0",
     "vite": "^7.0.4"

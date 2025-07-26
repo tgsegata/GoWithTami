@@ -10,9 +10,9 @@
 \*-----------------------------------*/
 :root {
     /* Colors for GoWithTami branding */
-    --tami-pink: #fb95cf;
+    --tami-pink: #3c6fc0;
     /* Playful pink for warmth */
-    --tami-green: #4aba73;
+    --tami-green: rgb(42, 158, 85);
     /* Calm green for nature */
     --tami-pink-light: #ffdaec;
     /* Light pink for backgrounds */
