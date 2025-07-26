@@ -151,8 +151,8 @@
                         Chat with Tami’s AI to build a trip that matches your vibe, budget, and time. From packing lists
                         to full itineraries — just say the word!
                     </p>
-                    <div class="assistant-images">
-                        <img src="images/TamiAi-1.png" alt="chatbot tami AI">
+                    <div class="assistant-images ">
+                        <img src="images/TamiAi-1.png" alt="chatbot tami AI" class="effect3d">
 
                         <ul class="gallery-list">
                             <li class="gallery-item">
@@ -749,13 +749,24 @@
         });
     </script>
 
-    <!--  -->
+    <!-- js library animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script>
         gsap.from(".hero-title", {
             y: 100,
             opacity: 0,
             duration: 1
+        });
+    </script>
+
+    <!-- js library 3d effect -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".effect3d"), {
+            max: 15,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.3
         });
     </script>
 
