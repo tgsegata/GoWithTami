@@ -110,7 +110,7 @@
             <!-- hero -->
             <section class="hero" id="home">
                 <div class="container">
-                    <h2 class="h1 hero-title">Go With Tami</h2>
+                    <h2 class="h1 hero-title element">Go With Tami</h2>
                     <p class="hero-text">Join Tami on unforgettable journeys to the world's most beautiful destinations,
                         handpicked for their stunning landscapes and rich cultures.</p>
                     <div class="btn-group">
@@ -732,6 +732,19 @@
                 easing: 'ease-in-out',
                 origin: 'bottom',
                 interval: 200
+            });
+        });
+    </script>
+
+    <!-- typing effect js library -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            new Typed(".element", {
+                strings: ["Plan your trip.", "Chat with Tami.", "Explore the world!"],
+                typeSpeed: 80,
+                backSpeed: 30,
+                loop: true
             });
         });
     </script>
